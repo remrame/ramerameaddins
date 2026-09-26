@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Add-in Word Sederhana</title>
+    
     <!-- Memuat Office JavaScript API dari CDN resmi Microsoft -->
     <script src="https://microsoft.com" type="text/javascript"></script>
+    
+    <!-- Memuat file logika JavaScript (Dipindah ke atas agar siap sebelum tombol dirender) -->
+    <script src="taskpane.js" type="text/javascript"></script>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,9 +36,8 @@
 <body>
     <h2>Add-in Internal Perusahaan</h2>
     <p>Klik tombol di bawah ini untuk memasukkan teks template secara otomatis ke dalam dokumen Word Anda.</p>
+    
+    <!-- Tombol aksi -->
     <button id="insert-text-btn" class="btn">Masukkan Teks</button>
-
-    <!-- Memuat file logika JavaScript -->
-    <script src="taskpane.js" type="text/javascript"></script>
 </body>
 </html>

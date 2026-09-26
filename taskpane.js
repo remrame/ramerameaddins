@@ -1,24 +1,27 @@
-// Memastikan Office JS API telah siap sebelum menjalankan kode
-Office.onReady((info) => {
+// Memastikan Office JS API telah siap sepenuhnya sebelum menjalankan kode
+Office.onReady(function (info) {
     if (info.host === Office.HostType.Word) {
-        // Menghubungkan fungsi klik ke tombol HTML
-        document.getElementById("insert-text-btn").onclick = insertText;
+        // Menggunakan addEventListener standar untuk memastikan tombol merespons di cloud browser
+        const myButton = document.getElementById("insert-text-btn");
+        if (myButton) {
+            myButton.addEventListener("click", insertText);
+        }
     }
 });
 
 async function insertText() {
     try {
         await Word.run(async (context) => {
-            // Mengambil elemen bodi atau area pengetikan utama di Word
+            // Mengambil area bodi dokumen utama
             const body = context.document.body;
             
-            // Memasukkan teks di akhir dokumen (End)
-            body.insertText("Halo Dunia dari Office Add-in!\n", Word.InsertLocation.end);
+            // Menggunakan Word.InsertLocation.end untuk memasukkan teks ke dokumen
+            body.insertText("Halo Dunia dari Office Add-in yang Diperbarui!\n", Word.InsertLocation.end);
             
-            // Menjalankan perintah ke aplikasi Word
+            // Menjalankan perintah dan sinkronisasi ke aplikasi Word
             await context.sync();
         });
     } catch (error) {
-        console.error("Terjadi kesalahan: " + error);
+        console.error("Terjadi kesalahan sistem: " + error);
     }
 }
