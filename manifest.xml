@@ -27,7 +27,7 @@
 
   <!-- 6. Pengaturan Sumber File (Pastikan URL diganti dengan milik Anda) -->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://USERNAME_GITHUB_ANDA.github.io/NAMA_REPO_ANDA/index.html" />
+    <SourceLocation DefaultValue="https://remrame.github.io/ramerameaddins/index.html" />
   </DefaultSettings>
 
   <!-- 7. Tingkat Hak Akses (Wajib ditaruh paling bawah sebelum penutup) -->
