@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp 
+  xmlns="http://microsoft.com" 
+  xmlns:xsi="http://w3.org" 
+  xmlns:bt="http://microsoft.com" 
+  xmlns:ov="http://microsoft.com" 
+  xsi:type="TaskPaneApp">
+
+  <!-- ID Unik untuk Add-in Anda (bisa diganti acak jika membuat proyek baru) -->
+  <Id>d3b07384-d112-4c28-9c96-03c00494cf56</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Perusahaan Saya</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Add-in Sederhana Saya" />
+  <Description DefaultValue="Sebuah add-in Word sederhana untuk demonstrasi." />
+  
+  <IconUrl DefaultValue="https://microsoft.com" />
+  <HighResolutionIconUrl DefaultValue="https://microsoft.com" />
+
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+
+  <DefaultSettings>
+    <!-- UBAH URL DI BAWAH INI SESUAI DENGAN ALAMAT GITHUB PAGES ANDA NANTI -->
+    <SourceLocation DefaultValue="https://USERNAME_ANDA.github.io/NAMA_REPO_ANDA/index.html" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
