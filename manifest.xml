@@ -23,7 +23,7 @@
 
   <DefaultSettings>
     <!-- UBAH URL DI BAWAH INI SESUAI DENGAN ALAMAT GITHUB PAGES ANDA NANTI -->
-    <SourceLocation DefaultValue="https://USERNAME_ANDA.github.io/NAMA_REPO_ANDA/index.html" />
+    <SourceLocation DefaultValue="https://remrame.github.io/ramerameaddins/index.html" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
