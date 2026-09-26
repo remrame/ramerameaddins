@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp 
-  xmlns="http://microsoft.com" 
-  xmlns:xsi="http://w3.org" 
-  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
-  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:type="TaskPaneApp">
 
-  <!-- ID unik berformat GUID resmi (Jangan diubah strukturnya) -->
+  <!-- 1. ID berformat GUID Resmi (Wajib di urutan teratas) -->
   <Id>d3b07384-d112-4c28-9c96-03c00494cf56</Id>
+  
+  <!-- 2. Informasi metadata dasar wajib -->
   <Version>1.0.0.0</Version>
   <ProviderName>Perusahaan Saya</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   
-  <!-- Nama dan Deskripsi Add-in -->
+  <!-- 3. Tampilan Nama dan Deskripsi -->
   <DisplayName DefaultValue="Add-in Sederhana Saya" />
   <Description DefaultValue="Sebuah add-in Word sederhana untuk demonstrasi." />
   
-  <!-- Ikon wajib berstatus HTTPS valid -->
+  <!-- 4. Tautan Icon berformat HTTPS (Urutan setelah Deskripsi) -->
   <IconUrl DefaultValue="https://microsoft.com" />
   <HighResolutionIconUrl DefaultValue="https://microsoft.com" />
 
-  <!-- Penempatan Target Aplikasi (Word) -->
+  <!-- 5. Target Aplikasi (Word) -->
   <Hosts>
     <Host Name="Document" />
   </Hosts>
 
-  <!-- Lokasi File HTML Utama (Pastikan diakhiri dengan /index.html) -->
+  <!-- 6. Pengaturan Sumber File (Pastikan URL diganti dengan milik Anda) -->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://remrame.github.io/ramerameaddins/index.html" />
+    <SourceLocation DefaultValue="https://USERNAME_GITHUB_ANDA.github.io/NAMA_REPO_ANDA/index.html" />
   </DefaultSettings>
 
-  <!-- Tingkat Izin Akses Dokumen -->
+  <!-- 7. Tingkat Hak Akses (Wajib ditaruh paling bawah sebelum penutup) -->
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
